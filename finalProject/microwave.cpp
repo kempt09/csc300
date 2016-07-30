@@ -39,11 +39,11 @@ const Keypad Microwave::getKeyLayout(){
 const Power Microwave::getPowerSettings(){
   return powerSettings;
 };
-const Door Microwave::getDoorState(){
-  return doorState;
+const bool Microwave::getDoorState(){
+  return doorState.getIsOpen();
 };
-const Light Microwave::getLightState(){
-  return lightState;
+const bool Microwave::getLightState(){
+  return lightState.getIsIlluminated();
 };
 const bool Microwave::getIsOn(){
   return isOn;
@@ -63,21 +63,11 @@ void Microwave::setKeyLayout(Keypad controls){
 void Microwave::setPowerSettings(Power power){
   powerSettings = power;
 };
-void Microwave::setDoorState(Door door){
-  if(door.getIsOpen()){
-    door.setIsOpen(false);
-  } else {
-    door.setIsOpen(true);
-  }
-  doorState = door;
+void Microwave::setDoorState(bool val){
+  doorState.setIsOpen(val);
 };
-void Microwave::setLightState(Light light){
-  if(light.getIsIlluminated()){
-    light.setIsIlluminated(false);
-  } else {
-    light.setIsIlluminated(true);
-  }
-  lightState = light;
+void Microwave::setLightState(bool val){
+  lightState.setIsIlluminated(val);
 };
 void Microwave::setIsOn(bool value){
   isOn = value;

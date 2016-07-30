@@ -16,9 +16,7 @@ Clock::Clock(int min, int sec, int hrs, string identifier){
   hours = hrs;
   type = identifier;
 };
-Clock::~Clock(){
-  cout << "Deleting Clock Object" << endl;
-};
+Clock::~Clock(){};
 const int Clock::getMinutes(){
   return minutes;
 };
@@ -45,17 +43,14 @@ void Clock::setType(string identifier){
 };
 
 // functional methods
-bool Clock::alarm(Clock time){
-  return true;
+void Clock::clearTime(){
+  minutes = 0;
+  seconds = 0;
+  hours = 0;
 };
-void Clock::clearTime(Clock time){
-  time.setMinutes(0);
-  time.setSeconds(0);
-  time.setHours(0);
+void Clock::decremetTime(){
+  seconds = seconds - 10;
 };
-void Clock::decremetTime(Clock time){
-  time.setSeconds(time.getSeconds() - 1);
-};
-void Clock::incrementTime(Clock time){
-  time.setSeconds(time.getSeconds() + 1);
+void Clock::incrementTime(){
+  seconds = seconds + 10;
 };

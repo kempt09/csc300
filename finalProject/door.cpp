@@ -9,9 +9,7 @@ Door::Door(){
 Door::Door(bool value){
   isOpen = value;
 };
-Door::~Door(){
-  cout << "Deleting Door Object" << endl;
-};
+Door::~Door(){};
 const bool Door::getIsOpen(){
   return isOpen;
 };

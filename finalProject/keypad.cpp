@@ -16,9 +16,7 @@ Keypad::Keypad(vector<Control> buttons, Clock time, Power power){
   timeDisplay = time;
   powerSettings = power;
 };
-Keypad::~Keypad(){
-  cout << "Deleting Keypad Object" << endl;
-};
+Keypad::~Keypad(){};
 const vector<Control> Keypad::getControls(){
   return controls;
 };
@@ -28,9 +26,12 @@ const Clock Keypad::getTimeDisplay(){
 const Power Keypad::getPowerSettings(){
   return powerSettings;
 };
-const int Keypad::controlSelected(){
-  // need to implement this still
-  return 1;
+const int Keypad::controlSelected(int index){
+  for(int i = 0; i < controls.size(); i++){
+    if(controls[i].getValue() == index){
+      return controls[i].getValue();
+    }
+  }
 };
 void Keypad::setControls(vector<Control> buttons){
   controls = buttons;
@@ -40,4 +41,14 @@ void Keypad::setTimeDisplay(Clock time){
 };
 void Keypad::setPowerSettings(Power power){
   powerSettings = power;
+};
+void Keypad::printControls(){
+  cout << "0 " << "1 " << "2 " << endl;
+  cout << "3 " << "4 " << "5 " << endl;
+  cout << "6 " << "7 " << "8 " << endl;
+  cout << "9 " << "10: Cancel " << "11: On " << endl;
+  cout << "12: Off " << "13: Plus " << "14: Minus " << endl;
+  cout << "15: Clear " << "16: Set Alarm " << endl;
+  cout << "17: Light " << "18: Door " << endl;
+  cout << "19: Start " << "20: Stop " << endl;
 };

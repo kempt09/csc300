@@ -22,10 +22,10 @@ public:
   void setType(string identifier);
 
   // functional methods
-  bool alarm(Clock time);
-  void clearTime(Clock time);
-  void decremetTime(Clock time);
-  void incrementTime(Clock time);
+
+  void clearTime();
+  void decremetTime();
+  void incrementTime();
 
 
 

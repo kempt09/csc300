@@ -12,9 +12,7 @@ Control::Control(string key, int val){
   name = key;
   value = val;
 };
-Control::~Control(){
-    cout << "Deleting Control Object" << endl;
-};
+Control::~Control(){};
 const string Control::getName(){
   return name;
 };

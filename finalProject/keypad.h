@@ -21,10 +21,11 @@ public:
   const vector<Control> getControls();
   const Clock getTimeDisplay();
   const Power getPowerSettings();
-  const int controlSelected();
+  const int controlSelected(int index);
   void setControls(vector<Control> buttons);
   void setTimeDisplay(Clock time);
   void setPowerSettings(Power power);
+  void printControls();
 
 
 

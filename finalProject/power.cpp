@@ -13,9 +13,7 @@ Power::Power(double out, double min, double max){
   minimum = min;
   maximum = max;
 };
-Power::~Power(){
-  cout << "Deleting Power Object" << endl;
-};
+Power::~Power(){};
 const double Power::getOutput(){
   return output;
 };

@@ -9,9 +9,7 @@ Light::Light(){
 Light::Light(bool value){
   isIlluminated = value;
 };
-Light::~Light(){
-  cout << "Deleting Light Object" << endl;
-};
+Light::~Light(){};
 const bool Light::getIsIlluminated(){
   return isIlluminated;
 };

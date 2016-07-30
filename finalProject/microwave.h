@@ -22,16 +22,16 @@ public:
   const int getSerialNumber();
   const Keypad getKeyLayout();
   const Power getPowerSettings();
-  const Door getDoorState();
-  const Light getLightState();
+  const bool getDoorState();
+  const bool getLightState();
   const bool getIsOn();
   void setModelName(string model);
   void setManufacturer(string maker);
   void setSerialNumber(int serial);
   void setKeyLayout(Keypad controls);
   void setPowerSettings(Power power);
-  void setDoorState(Door door);
-  void setLightState(Light light);
+  void setDoorState(bool val);
+  void setLightState(bool val);
   void setIsOn(bool value);
 
 private:
