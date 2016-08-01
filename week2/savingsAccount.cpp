@@ -1,5 +1,6 @@
 #include "account.h"
 #include "savingsAccount.h"
+#include "accountError.h"
 #include <iostream>
 #include <string>
 
@@ -14,4 +15,18 @@ const double SavingsAccount::getAnnualInterest(){
 };
 const double SavingsAccount::getMonthlyInterest(){
   return (getBalance() * MONTHLY_RATE) + getBalance();
+};
+
+void SavingsAccount::withdraw(double amount){
+
+  try {
+    if(getBalance() - amount > getOverdraft()){
+      setBalance(getBalance() - amount);
+    } else {
+      throw AccountError();
+    }
+  } catch(AccountError &e) {
+    cout << e.overdraftSavingsError() << endl; 
+  }
+
 };

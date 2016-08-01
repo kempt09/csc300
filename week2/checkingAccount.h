@@ -9,7 +9,7 @@ class CheckingAccount : public Account {
 
 public:
   CheckingAccount(string first, string last, double accountBalance, string institutuion);
-  void withdraw(double amount, string institutuion);
+  void withdraw(double amount);
 };
 
 #endif

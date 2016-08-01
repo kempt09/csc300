@@ -23,7 +23,7 @@ public:
   void setOverdraft(double amount);
   virtual const double getAnnualInterest();
   virtual const double getMonthlyInterest();
-  virtual void withdraw(double amount, string institutuion);
+  virtual void withdraw(double amount);
   void deposit(double amount);
   void print();
 

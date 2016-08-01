@@ -9,6 +9,7 @@ class SavingsAccount : public Account {
 
 public:
   SavingsAccount(string first, string last, double accountBalance, string institutuion);
+  void withdraw(double amount);
   const double getAnnualInterest();
   const double getMonthlyInterest();
 

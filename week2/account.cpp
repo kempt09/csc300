@@ -52,7 +52,7 @@ void Account::setBankName(string name){
 void Account::setBalance(double amount){
   balance = amount;
 };
-void Account::withdraw(double amount, string institutuion){
+void Account::withdraw(double amount){
   balance = balance - amount;
 };
 void Account::deposit(double amount){
